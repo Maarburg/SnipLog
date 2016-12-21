@@ -1,25 +1,26 @@
-f = open("snipslist.txt","a")
-snip_list = []
-
-#take snip
-add_snip_name = input(str("What is the name of this Snip?\n"))
-add_snip_code = input(str("Whis is the snip?\n"))
-add_snip_tags = input(str("What tag for this snip?\n"))
-add_snip_lang = input(str("What language is this snip for?\n"))
-add_snip_notes = input(str("Any notes for this snip?\n"))
-
-#append snip list
-snip = {
-    'name':add_snip_name,
-    'code':add_snip_code,
-    'tags':add_snip_tags,
-    'lang':add_snip_lang,
-    'notes':add_snip_notes
-    }
-snip_list.append(snip)
-
-#append file
-f.write(str(snip))
-
-#close file
-f.close()
+def write2file():
+    f = open("snipslist.txt","a")
+    snip_list = []
+    
+    #take snip
+    add_snip_name = input(str("What is the name of this Snip?\n"))
+    add_snip_code = input(str("Whis is the snip?\n"))
+    add_snip_tags = input(str("What tag for this snip?\n"))
+    add_snip_lang = input(str("What language is this snip for?\n"))
+    add_snip_notes = input(str("Any notes for this snip?\n"))
+    
+    #append snip list
+    snip = {
+        'name':add_snip_name,
+        'code':add_snip_code,
+        'tags':add_snip_tags,
+        'lang':add_snip_lang,
+        'notes':add_snip_notes
+        }
+    snip_list.append(snip)
+    
+    #append file
+    f.write(str(snip))
+    
+    #close file
+    f.close()
