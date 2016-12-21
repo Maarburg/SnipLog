@@ -1,6 +1,9 @@
+#untested
+
+
 def write2file():
     f = open("snipslist.txt","a")
-    snip_list = []
+    snip_dict = {}
     
     #take snip
     add_snip_name = input(str("What is the name of this Snip?\n"))
@@ -9,7 +12,7 @@ def write2file():
     add_snip_lang = input(str("What language is this snip for?\n"))
     add_snip_notes = input(str("Any notes for this snip?\n"))
     
-    #append snip list
+    #append snip dict
     snip = {
         'name':add_snip_name,
         'code':add_snip_code,
@@ -17,10 +20,11 @@ def write2file():
         'lang':add_snip_lang,
         'notes':add_snip_notes
         }
-    snip_list.append(snip)
+    snip_dict.append(snip)
     
     #append file
     f.write(str(snip))
     
     #close file
     f.close()
+
